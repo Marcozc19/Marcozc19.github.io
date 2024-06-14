@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
+import { FaAngleDown } from 'react-icons/fa';  // Import FaAngleDown
+import { BiDownload } from 'react-icons/bi';
 
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
@@ -14,10 +16,14 @@ import {
     FaGithub,
     FaYoutube,
     FaBlogger,
+    FaInstagram,
 } from 'react-icons/fa';
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
+    const toggleDropdown = () => {
+        document.querySelector('.dropdownContent').classList.toggle(classes.show);
+    };
 
     const useStyles = makeStyles((t) => ({
         resumeBtn: {
@@ -25,7 +31,7 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
+            width: '160px',
             fontSize: '1rem',
             fontWeight: '500',
             height: '50px',
@@ -40,6 +46,43 @@ function Landing() {
             [t.breakpoints.down('sm')]: {
                 width: '180px',
             },
+        },
+        dropdownContent: {
+            color: theme.primary,
+            borderRadius: '30px',
+            display: 'none',
+            position: 'absolute',
+            backgroundColor: '#f9f9f9',
+            opacity: '0.7',
+            fontFamily: 'var(--primaryFont)',
+            textTransform: 'inherit',
+            minWidth: '160px',
+            boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+            zIndex: 1,
+            overflow: 'hidden',
+            textAlign: 'center', 
+            border: `3px solid ${theme.primary}`,
+            '& a': {
+                color: theme.primary,
+                padding: '12px 16px',
+                textDecoration: 'none',
+                display: 'block',
+                borderBottom: '1px solid #ddd',
+                '&:last-child': {
+                    borderBottom: 'none',
+                },
+            '&:hover': {
+                backgroundColor: theme.tertiary,
+                color: theme.secondary,
+                border: `3px solid ${theme.tertiary}`,
+            },
+            [t.breakpoints.down('sm')]: {
+                width: '180px',
+            },
+            },
+        },
+        show: {
+            display: 'block',
         },
         contactBtn: {
             backgroundColor: theme.primary,
@@ -140,6 +183,19 @@ function Landing() {
                                 />
                             </a>
                         )}
+                        {socialsData.instagram && (
+                            <a
+                                href={socialsData.instagram}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaInstagram
+                                    className='landing--social'
+                                    style={{ color: theme.secondary }}
+                                    aria-label='Blogger'
+                                />
+                            </a>
+                        )}
                     </div>
                 </div>
                 <img
@@ -159,22 +215,25 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6>{headerData.title}</h6>
+                        <h6 style={{marginBottom:'20px'}}>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
-                        <p>{headerData.desciption}</p>
+                        <p>{headerData.description1}</p>
+                        <p>{headerData.description2}</p>
+
 
                         <div className='lcr-buttonContainer'>
                             {headerData.resumePdf && (
-                                <a
-                                    href={headerData.resumePdf}
-                                    download='resume'
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <Button className={classes.resumeBtn}>
-                                        Download CV
+                                <div className="dropdown">
+                                    <Button className={classes.resumeBtn} onClick={toggleDropdown}>
+                                        Download CV <FaAngleDown/>
                                     </Button>
-                                </a>
+                                    <div className={`${classes.dropdownContent} dropdownContent`}>
+                                        <a href="resume_v1.pdf" download>PM <BiDownload/></a>
+                                        <a href="resume_v2.pdf" download>MLE <BiDownload/></a>
+                                        <a href="resume_v3.pdf" download>SWE <BiDownload/></a>
+                                        <a href="resume_v3.pdf" download>Data <BiDownload/></a>
+                                    </div>
+                                </div>
                             )}
                             <NavLink
                                 to='/#contacts'

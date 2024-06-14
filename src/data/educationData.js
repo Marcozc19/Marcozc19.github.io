@@ -1,23 +1,18 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Marble Hills Middle School',
-        course: 'Higher Secondary Education',
-        startYear: '2007',
-        endYear: '2015'
+        institution: 'Tsinghua University - Beijing China',
+        course: 'Bachelor of Engineering',
+        startYear: '2019',
+        endYear: '2023',
+        relevantcourse:''
     },
     {
         id: 2,
-        institution: 'Somerset School of Science',
-        course: 'Bachelor of Technology',
-        startYear: '2015',
-        endYear: '2019'
-    },
-    {
-        id: 3,
-        institution: 'Hawking University, Cambridge',
+        institution: 'Cornell Tech @ Cornell Univeristy - New York, USA',
         course: 'Master of Technology',
         startYear: '2019',
-        endYear: 'Present'
+        endYear: 'Present',
+        relevantcourse:''
     },
 ]
