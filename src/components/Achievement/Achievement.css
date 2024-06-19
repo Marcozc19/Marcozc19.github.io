@@ -1,5 +1,5 @@
 .achievement {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -109,9 +109,10 @@
 }
 
 .achievecard-imgcontainer > img {
-    width: 150px;
+    width: 180px;
     height: 130px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
