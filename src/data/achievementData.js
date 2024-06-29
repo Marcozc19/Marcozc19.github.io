@@ -5,7 +5,7 @@ export const achievementData = {
         {
             id : 1,
             title : 'Web Development Certification',
-            details : 'A complete web development bootcamp covering HTML, CSS, JS, Node.js, APIs, Database, and React.js',
+            details : 'A complete web development bootcamp covering HTML, CSS, JS, Node.js, APIs, Database, and React.js.',
             date : 'Dec, 2023',
             field : 'Web Development',
             image : angelayu

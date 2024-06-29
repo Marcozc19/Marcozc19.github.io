@@ -6,6 +6,8 @@
     min-height: 100vh;
     overflow-x: hidden;
     padding: 2rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
 }
 
 
@@ -17,6 +19,13 @@
     margin: 1rem;
 }
 
+.projects--filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5rem;
+}
 
 .projects--header h1 {
     margin-bottom: 40px;
@@ -34,6 +43,7 @@
 
 .projects--bodyContainer {
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
     gap: 4.5rem;

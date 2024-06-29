@@ -1,4 +1,4 @@
-import React,{ useContext} from 'react';
+import React,{ useContext, useState} from 'react';
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -9,10 +9,21 @@ import { HiArrowRight } from "react-icons/hi";
 import './Projects.css'
 import SingleProject from './SingleProject/SingleProject';
 
+const filterCategories = ['AI/ML', 'Data', 'Software'];
+
 function Projects() {
 
     const { theme } = useContext(ThemeContext);
+    const [projects, setProjects] = useState(projectsData);
+    const [selectedFilter, setSelectedFilter] = useState('All');
 
+    const handleFilterClick = (filter) => {
+        setSelectedFilter(filter);
+    };
+
+    const filteredProjects = selectedFilter === 'All'
+        ? projects
+        : projects.filter(project => project.tag.includes(selectedFilter));
     
     const useStyles = makeStyles(() => ({
         viewAllBtn : {
@@ -39,6 +50,29 @@ function Projects() {
                 backgroundColor: theme.secondary,
             }
         },
+        filterButton: {
+            color: theme.tertiary,
+            backgroundColor: theme.primary50,
+            fontSize: '20px',
+            padding: '0.5rem 1rem',
+            margin: '0.2rem',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s',
+            "&:hover": {
+                color: theme.secondary,
+                backgroundColor: theme.primary
+            },
+            "&:active":{
+                color: theme.secondary,
+                backgroundColor: theme.primary
+            }
+        },
+        activeButton: {
+            color: theme.secondary,
+            backgroundColor: theme.primary
+        }
     }));
 
     const classes = useStyles();
@@ -50,9 +84,26 @@ function Projects() {
                     <div className="projects--header">
                         <h1 style={{color: theme.primary}}>Projects</h1>
                     </div>
+                    <div className="projects--filter">
+                        {filterCategories.map(filter => (
+                            <button
+                                key={filter}
+                                className={`${classes.filterButton} ${selectedFilter === filter ? classes.activeButton : ''}`}
+                                onClick={() => handleFilterClick(filter)}
+                            >
+                                {filter}
+                            </button>
+                        ))}
+                        <button
+                            className={`${classes.filterButton} ${selectedFilter === 'All' ? classes.activeButton : ''}`}
+                            onClick={() => handleFilterClick('All')}
+                        >
+                            All
+                        </button>
+                    </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
-                            {projectsData.slice(0, 3).map(project => (
+                            {filteredProjects.map(project => (
                                 <SingleProject
                                     theme={theme}
                                     key={project.id}
@@ -67,7 +118,7 @@ function Projects() {
                             ))}
                         </div> 
 
-                        {projectsData.length > 3 && (
+                        {/* {projectsData.length > 3 && (
                             <div className="projects--viewAll">
                                 <Link to="/projects">
                                     <button className={classes.viewAllBtn}>
@@ -76,7 +127,7 @@ function Projects() {
                                     </button>
                                 </Link>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             )}

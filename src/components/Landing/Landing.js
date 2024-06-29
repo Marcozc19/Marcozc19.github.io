@@ -228,10 +228,10 @@ function Landing() {
                                         Download CV <FaAngleDown/>
                                     </Button>
                                     <div className={`${classes.dropdownContent} dropdownContent`}>
-                                        <a href="resume_v1.pdf" download>PM <BiDownload/></a>
-                                        <a href="resume_v2.pdf" download>MLE <BiDownload/></a>
-                                        <a href="resume_v3.pdf" download>SWE <BiDownload/></a>
-                                        <a href="resume_v3.pdf" download>Data <BiDownload/></a>
+                                        <a href="resume_pm.pdf" download>PM <BiDownload/></a>
+                                        <a href="resume_mle.pdf" download>AI/ML <BiDownload/></a>
+                                        {/* <a href="resume_swe.pdf" download>SWE <BiDownload/></a> */}
+                                        {/* <a href="resume_data.pdf" download>Data <BiDownload/></a> */}
                                     </div>
                                 </div>
                             )}

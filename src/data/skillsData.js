@@ -1,5 +1,5 @@
  export const skillsData = [
-    'HTML', 'CSS', 'Javascript', 'React', 'Next JS', 'Markdown', 'C', 'C++', 'Python', 'Typescript', 'MongoDB', 'Git', 'MySQL', 'PostgreSQL', 'Pytorch'
+    'HTML', 'CSS', 'Javascript', 'React', 'Next JS', 'Markdown', 'C', 'C++', 'Python', 'Typescript', 'MongoDB', 'Docker','Git', 'MySQL', 'PostgreSQL', 'Pytorch'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
