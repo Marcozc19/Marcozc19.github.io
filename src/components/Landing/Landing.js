@@ -222,19 +222,18 @@ function Landing() {
 
 
                         <div className='lcr-buttonContainer'>
-                            {headerData.resumePdf && (
-                                <div className="dropdown">
-                                    <Button className={classes.resumeBtn} onClick={toggleDropdown}>
-                                        Download CV <FaAngleDown/>
-                                    </Button>
-                                    <div className={`${classes.dropdownContent} dropdownContent`}>
-                                        <a href="resume_pm.pdf" download>PM <BiDownload/></a>
-                                        <a href="resume_mle.pdf" download>AI/ML <BiDownload/></a>
-                                        {/* <a href="resume_swe.pdf" download>SWE <BiDownload/></a> */}
-                                        {/* <a href="resume_data.pdf" download>Data <BiDownload/></a> */}
-                                    </div>
+                            <div className="dropdown">
+                                <Button className={classes.resumeBtn} onClick={toggleDropdown}>
+                                    Download CV <FaAngleDown/>
+                                </Button>
+                                <div className={`${classes.dropdownContent} dropdownContent`}>
+                                    <a href="resume_pm.pdf" download>PM <BiDownload/></a>
+                                    <a href="resume_mle.pdf" download>AI/ML <BiDownload/></a>
+                                    <a href="resume_swe.pdf" download>SWE <BiDownload/></a>
+                                    {/* <a href="resume_data.pdf" download>Data <BiDownload/></a> */}
                                 </div>
-                            )}
+                            </div>
+
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}

@@ -1,5 +1,6 @@
 import resume_pm from '../assets/pdf/resume_pm.pdf'
 import resume_mle from '../assets/pdf/resume_mle.pdf'
+import resume_swe from '../assets/pdf/resume_swe.pdf'
 import header from '../assets/png/headshot.jpg'
 
 export const headerData = {
@@ -10,4 +11,5 @@ export const headerData = {
     image: header,
     resume_pm: resume_pm,
     resume_mle: resume_mle,
+    resume_swe: resume_swe,
 }
