@@ -107,3 +107,10 @@
     word-break: break-word; 
     line-height: 100%;
 }
+
+.projectImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -3,10 +3,20 @@ import two from '../assets/svg/projects/two.svg'
 import three from '../assets/svg/projects/three.svg'
 import four from '../assets/svg/projects/four.svg'
 import five from '../assets/svg/projects/five.svg'
-import six from '../assets/svg/projects/six.svg'
+import CVRP from '../assets/svg/projects/six.svg'
 import seven from '../assets/svg/projects/seven.svg'
 import eight from '../assets/svg/projects/eight.svg'
-
+import nine from '../assets/svg/projects/nine.svg'
+import ten from '../assets/svg/projects/ten.svg'
+import eleven from '../assets/svg/projects/eleven.svg'
+import twelve from '../assets/svg/projects/twelve.svg'
+import thirteen from '../assets/svg/projects/thirteen.svg'
+import nlp from '../assets/svg/projects/nlp.webp'
+import pricetounament from  '../assets/svg/projects/pricetournament.webp'
+import minitorch from  '../assets/svg/projects/minitorch.webp'
+import turbine from '../assets/svg/projects/turbine.webp'
+import heart from '../assets/svg/projects/heart.webp'
+import { FaDiceFive } from 'react-icons/fa'
 
 export const projectsData = [
     {
@@ -16,7 +26,7 @@ export const projectsData = [
         tags: ['Python', 'Langchain', 'OpenAI', 'FAISS'],
         code: 'https://github.com/DevTechCollective/RepoRover',
         demo: 'https://reporover.streamlit.app/',
-        image: one,
+        image: ten,
         tag: ['AI/ML'],
     },
     {
@@ -26,7 +36,7 @@ export const projectsData = [
         tags: ['Python', 'Pytorch', 'NLTK', 'Re'],
         code: '',
         demo: '',
-        image: one,
+        image: nlp,
         tag: ['AI/ML']
     },
     {
@@ -36,7 +46,7 @@ export const projectsData = [
         tags: ['Python', 'Sci-kit-Learn', 'XGBoost', ' NumPy', 'Pandas'],
         code: 'https://github.com/Marcozc19/Competitive-Pricing-Algorithm',
         demo: 'https://github.com/Marcozc19/Competitive-Pricing-Algorithm',
-        image: two,
+        image: pricetounament,
         tag: ['Data']
     },
     {
@@ -46,7 +56,7 @@ export const projectsData = [
         tags: ['Python', 'NumPy', 'Numba', 'CUDA'],
         code: 'https://github.com/Marcozc19/Minitorch',
         demo: 'https://minitorch.github.io/',
-        image: three,
+        image: minitorch,
         tag: ['AI/ML']
     },
     {
@@ -56,7 +66,7 @@ export const projectsData = [
         tags: ['Python', 'Heuristic Algorithm', 'Gurobi'],
         code: 'https://github.com/Marcozc19/public.github.io/tree/main/Operations%20Research%20-%20CVRP%20Project',
         demo: 'https://github.com/Marcozc19/public.github.io/blob/main/Operations%20Research%20-%20CVRP%20Project/Final%20Thesis.pdf',
-        image: four,
+        image: eight,
         tag: ['Data']
     },
     {
@@ -66,7 +76,7 @@ export const projectsData = [
         tags: ['Python', 'TensorFlow', 'Keras', 'Sci-kit-Learn'],
         code: 'https://github.com/Marcozc19/public.github.io/tree/main/ML%20Wind%20Turbine%20Reliability%20Project',
         demo: 'https://github.com/Marcozc19/public.github.io/tree/main/ML%20Wind%20Turbine%20Reliability%20Project',
-        image: five,
+        image: turbine,
         tag: ['AI/ML']
     },
     {
@@ -76,7 +86,7 @@ export const projectsData = [
         tags: ['Typescript'],
         code: 'https://github.com/calcom/cal.com/pull/12642',
         demo: 'https://github.com/calcom/cal.com/pull/12642',
-        image: six,
+        image: twelve,
         tag: ['Software']
     },
     {
@@ -96,7 +106,7 @@ export const projectsData = [
         tags: ['Python', 'R'],
         code: 'https://github.com/Marcozc19/public.github.io/tree/main/Data%20Analysis%20-%20CDC%20Heart%20Indicator',
         demo: 'https://github.com/Marcozc19/public.github.io/tree/main/Data%20Analysis%20-%20CDC%20Heart%20Indicator',
-        image: eight,
+        image: heart,
         tag: ['Data']
     },
     {
@@ -106,7 +116,7 @@ export const projectsData = [
         tags: ['R'],
         code: 'https://github.com/Marcozc19/public.github.io/tree/main/Design%20of%20Experiment%20-%20Parkinsons%20Disease%20Project',
         demo: 'https://github.com/Marcozc19/public.github.io/tree/main/Design%20of%20Experiment%20-%20Parkinsons%20Disease%20Project',
-        image: eight,
+        image: five,
         tag: ['Data']
     },
 ]

@@ -44,11 +44,11 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 <div className='projectContent'>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
-                        style={{ color: theme.tertiary }}
+                        style={{ color: theme.tertiary, height: 'fit-content' }}
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : placeholder} alt={name} />
+                    <img className='projectImage' src={image ? image : placeholder} alt={name} />
                     <div className='project--showcaseBtn'>
                         <a
                             href={demo}
